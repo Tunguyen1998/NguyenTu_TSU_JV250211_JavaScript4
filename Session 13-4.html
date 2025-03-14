@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let randomNumbers = prompt ("Hay nhap vao day so bat ky, ngan cach boi dau phay :") ;
+        let numberArray = randomNumbers.split(",").map(Number);
+        if (numberArray.length === 0 || numberArray.some(isNaN)){
+            alert (' Chuoi nhap vao khong hop le. Moi nhap so !');
+        }else {
+            let maxNumber = numberArray[0];
+
+            for (let i = 1; i < numberArray.length; i++){
+            if (numberArray[i] > maxNumber){
+                maxNumber = numberArray[i];
+            }
+          }
+        
+        alert (" So lon nhat trong chuoi ban nhap la : " + maxNumber);
+         }
+
+    </script> 
+</body>
+</html>
